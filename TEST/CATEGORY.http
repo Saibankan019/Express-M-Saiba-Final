@@ -1,0 +1,15 @@
+### Category - Create Category
+POST http://localhost:3001/api/categories
+Content-Type: application/json
+
+{
+  "name": "Fashion",
+  "description": "apa aja lah",
+  "createdBy": 1
+}
+
+### Category - Get All Categories
+GET http://localhost:3001/api/categories
+
+### Menampilkan Ringkasan per Kategori
+GET http://localhost:3001/api/items/summary/category

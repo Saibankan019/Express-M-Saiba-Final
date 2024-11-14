@@ -1,0 +1,17 @@
+### Supplier - Create Supplier
+POST http://localhost:3001/api/suppliers
+Content-Type: application/json
+
+{
+  "name": "saiba",
+  "contactInfo": "888-888-888",
+  "createdBy": 1
+}
+
+###
+
+### Supplier - Get All Suppliers
+GET http://localhost:3001/api/suppliers
+
+### Menampilkan Ringkasan Barang Berdasarkan Pemasok
+GET http://localhost:3001/api/items/summary/supplier

@@ -1,0 +1,12 @@
+### Admin - Create Admin
+POST http://localhost:3001/api/admins
+Content-Type: application/json
+
+{
+  "username": "saiba1",
+  "password": "saibaNinteen",
+  "email": "saiba19@example.com"
+}
+
+### Admin - Get All Admins
+GET http://localhost:3001/api/admins

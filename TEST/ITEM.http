@@ -1,0 +1,28 @@
+### Item - Create Item
+POST http://localhost:3001/api/items
+Content-Type: application/json
+
+{
+  "name": "Laptop",
+  "description": "buatan saya sendiri",
+  "price": 99.99,
+  "quantity": 4,
+  "categoryId": 1,
+  "supplierId": 1,
+  "createdBy": 1
+}
+
+### Item - Get All Items
+GET http://localhost:3001/api/items
+
+### Item - Get Low-Stock Items (Threshold below 5 units)
+GET http://localhost:3001/api/items/low-stock
+
+### Item - Get Items by Specific Category
+GET http://localhost:3001/api/items/category/1
+
+### Stock Summary - Displays total stock, value, and average price
+GET http://localhost:3001/api/items/summary/stock
+
+### System Summary - Overview of Total Items, Categories, Suppliers, and Stock Value
+GET http://localhost:3001/api/items/summary/system
