@@ -1,3 +1,5 @@
+## Muhammad Fadhlan Hakim || A11.2022.14619 || Pemrograman Sisi Server
+
 # 📦 API Manajemen Inventaris
 
 API ini dirancang untuk mengelola inventaris barang, kategori, pemasok, dan admin. API menyediakan fitur CRUD untuk setiap entitas, serta endpoint untuk menampilkan ringkasan stok dan barang yang stoknya hampir habis. Aplikasi ini dibangun menggunakan **Node.js**, **Express**, **Prisma**, dan **PostgreSQL**.
