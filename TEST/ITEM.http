@@ -3,13 +3,13 @@ POST http://localhost:3001/api/items
 Content-Type: application/json
 
 {
-  "name": "Laptop",
-  "description": "buatan saya sendiri",
-  "price": 99.99,
-  "quantity": 4,
-  "categoryId": 1,
-  "supplierId": 1,
-  "createdBy": 1
+  "name": "dragon fruit tree",
+  "description": "Dari Kebun Tetangga",
+  "price": 10.99,
+  "quantity": 1,
+  "categoryId": 2,
+  "supplierId": 4,
+  "createdBy": 3
 }
 
 ### Item - Get All Items
@@ -18,8 +18,8 @@ GET http://localhost:3001/api/items
 ### Item - Get Low-Stock Items (Threshold below 5 units)
 GET http://localhost:3001/api/items/low-stock
 
-### Item - Get Items by Specific Category
-GET http://localhost:3001/api/items/category/1
+### Item - Get Items by Specific Category (category yg saya buat hanya 1-4)
+GET http://localhost:3001/api/items/category/4 
 
 ### Stock Summary - Displays total stock, value, and average price
 GET http://localhost:3001/api/items/summary/stock

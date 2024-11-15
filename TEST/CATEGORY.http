@@ -3,9 +3,9 @@ POST http://localhost:3001/api/categories
 Content-Type: application/json
 
 {
-  "name": "Fashion",
-  "description": "apa aja lah",
-  "createdBy": 1
+  "name": "Food and Drinks",
+  "description": "Semua Makanan dan Minuman",
+  "createdBy": 5
 }
 
 ### Category - Get All Categories
