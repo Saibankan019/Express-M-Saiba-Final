@@ -1,4 +1,4 @@
-# Muhammad Fadhlan Hakim || A11.2022.14619 || Pemrograman Sisi Server
+## Muhammad Fadhlan Hakim || A11.2022.14619 || Pemrograman Sisi Server
 
 # 📦 API Manajemen Inventaris
 
@@ -40,73 +40,136 @@ API ini dirancang untuk mengelola inventaris barang, kategori, pemasok, dan admi
 1. 🛂 **Admin**
    - **Buat Admin**
      ```http
-     POST /api/admins
+     POST http://localhost:3001/api/admins
+     {
+     "username": "saiba5",
+     "password": "saibaNinteen",
+     "email": "saiba199999@example.com"
+      }
      ```
    - **Lihat Semua Admin**
      ```http
-     GET /api/admins
+     GET http://localhost:3001/api/admins
      ```
+     ~ example ~
+     {
+    "id": 1,
+    "username": "saiba1",
+    "password": "saibaNinteen",
+    "email": "saiba19@example.com",
+    "createdAt": "2024-11-14T15:48:15.103Z",
+    "updatedAt": "2024-11-14T15:48:15.103Z"
+     },
 
 2. 📂 **Kategori**
    - **Buat Kategori**
      ```http
-     POST /api/categories
+     POST http://localhost:3001/api/categories
+      {
+     "name": "Food and Drinks",
+     "description": "Semua Makanan dan Minuman",
+     "createdBy": 5
+      }
      ```
    - **Lihat Semua Kategori**
      ```http
-     GET /api/categories
+     GET http://localhost:3001/api/categories
      ```
-
-3. 🏢 **Pemasok**
+     ~ example ~
+     {
+    "id": 1,
+    "name": "Elektronik",
+    "description": "semua elektronik",
+    "createdBy": 2,
+    "createdAt": "2024-11-15T08:44:05.716Z",
+    "updatedAt": "2024-11-15T08:44:05.716Z",
+      }
+3. 🏢 **Supplier**
    - **Buat Pemasok**
      ```http
-     POST /api/suppliers
+     POST http://localhost:3001/api/suppliers
+     {
+     "name": "saiba5",
+     "contactInfo": "888-888-888",
+     "createdBy": 5
+      }
      ```
    - **Lihat Semua Pemasok**
      ```http
-     GET /api/suppliers
+     GET http://localhost:3001/api/suppliers
      ```
+     ~ example ~
+     {
+    "id": 1,
+    "name": "saiba",
+    "contactInfo": "888-888-888",
+    "createdBy": 1,
+    "createdAt": "2024-11-15T08:47:53.250Z",
+    "updatedAt": "2024-11-15T08:47:53.250Z",
+      }
 
 4. 📦 **Barang**
    - **Buat Barang**
      ```http
-     POST /api/items
+     POST http://localhost:3001/api/items
+     {
+     "name": "dragon fruit tree",
+     "description": "Dari Kebun Tetangga",
+     "price": 10.99,
+     "quantity": 1,
+     "categoryId": 2,
+     "supplierId": 4,
+     "createdBy": 3
+      }
      ```
    - **Lihat Semua Barang**
      ```http
-     GET /api/items
+     GET http://localhost:3001/api/items
      ```
+     ~ example ~
+     {
+    "id": 1,
+    "name": "Laptop",
+    "description": "buatan saya sendiri",
+    "price": "99.99",
+    "quantity": 4,
+    "categoryId": 1,
+    "supplierId": 1,
+    "createdBy": 1,
+    "createdAt": "2024-11-15T08:49:24.767Z",
+    "updatedAt": "2024-11-15T08:49:24.767Z",
+     }   
 
 ### 📊 Endpoint Ringkasan Data
 
 - 📑 **Ringkasan per Kategori**
   ```http
-  GET /api/items/summary/category
+  GET http://localhost:3001/api/items/summary/category
   ```
 
 - 📑 **Ringkasan Barang Berdasarkan Pemasok**
   ```http
-  GET /api/items/summary/supplier
+  GET http://localhost:3001/api/items/summary/supplier
   ```
 
 - ⚠️ **Barang Stok Rendah** (stok di bawah ambang batas 5 unit)
   ```http
-  GET /api/items/low-stock
+  GET http://localhost:3001/api/items/low-stock
   ```
 
 - 📂 **Barang Berdasarkan Kategori Tertentu**
   ```http
-  GET /api/items/category/{categoryId}
+  GET http://localhost:3001/api/items/category/1 
   ```
 
 - 📦 **Ringkasan Stok** (jumlah total stok, nilai, dan harga rata-rata)
   ```http
-  GET /api/items/summary/stock
+  GET http://localhost:3001/api/items/summary/stock
   ```
 
 - 📝 **Ringkasan Sistem** (total barang, kategori, pemasok, dan nilai stok)
   ```http
-  GET /api/items/summary/system
+  GET http://localhost:3001/api/items/summary/system
   ```
 
 ## 🛠️ Teknologi yang Digunakan
